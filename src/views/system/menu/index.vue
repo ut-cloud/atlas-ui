@@ -33,7 +33,7 @@
           icon="el-icon-plus"
           size="mini"
           @click="handleAdd"
-          v-hasPermi="['system:menu:add']"
+          v-hasPermi="['api.core.v1.SysMenu/CreateSysMenu']"
         >新增</el-button>
       </el-col>
       <el-col :span="1.5">
@@ -82,21 +82,21 @@
             type="text"
             icon="el-icon-edit"
             @click="handleUpdate(scope.row)"
-            v-hasPermi="['system:menu:edit']"
+            v-hasPermi="['api.core.v1.SysMenu/UpdateSysMenu']"
           >修改</el-button>
           <el-button
             size="mini"
             type="text"
             icon="el-icon-plus"
             @click="handleAdd(scope.row)"
-            v-hasPermi="['system:menu:add']"
+            v-hasPermi="['api.core.v1.SysMenu/CreateSysMenu']"
           >新增</el-button>
           <el-button
             size="mini"
             type="text"
             icon="el-icon-delete"
             @click="handleDelete(scope.row)"
-            v-hasPermi="['system:menu:remove']"
+            v-hasPermi="['api.core.v1.SysMenu/DeleteSysMenu']"
           >删除</el-button>
         </template>
       </el-table-column>

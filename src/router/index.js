@@ -96,7 +96,7 @@ export const dynamicRoutes = [
     path: '/system/user-auth',
     component: Layout,
     hidden: true,
-    permissions: ['system:user:edit'],
+    permissions: ['api.core.v1.SysUser/UpdateSysUser'],
     children: [
       {
         path: 'role/:userId(\\d+)',
@@ -110,7 +110,7 @@ export const dynamicRoutes = [
     path: '/system/role-auth',
     component: Layout,
     hidden: true,
-    permissions: ['system:role:edit'],
+    permissions: ['api.core.v1.SysRole/UpdateSysRole'],
     children: [
       {
         path: 'user/:roleId(\\d+)',
@@ -124,7 +124,7 @@ export const dynamicRoutes = [
     path: '/system/dict-data',
     component: Layout,
     hidden: true,
-    permissions: ['system:dict:list'],
+    permissions: ['api.core.v1.SysDict/ListSysDict*'],
     children: [
       {
         path: 'index/:dictId(\\d+)',

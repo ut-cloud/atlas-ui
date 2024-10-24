@@ -89,7 +89,7 @@
               icon="el-icon-plus"
               size="mini"
               @click="handleAdd"
-              v-hasPermi="['system:user:add']"
+              v-hasPermi="['api.core.v1.SysUser/SaveSysUser']"
             >新增
             </el-button>
           </el-col>
@@ -101,7 +101,7 @@
               size="mini"
               :disabled="single"
               @click="handleUpdate"
-              v-hasPermi="['system:user:edit']"
+              v-hasPermi="['api.core.v1.SysUser/UpdateSysUser']"
             >修改
             </el-button>
           </el-col>
@@ -113,7 +113,7 @@
               size="mini"
               :disabled="multiple"
               @click="handleDelete"
-              v-hasPermi="['system:user:remove']"
+              v-hasPermi="['api.core.v1.SysUser/DeleteSysUser']"
             >删除
             </el-button>
           </el-col>
@@ -182,7 +182,7 @@
                 type="text"
                 icon="el-icon-edit"
                 @click="handleUpdate(scope.row)"
-                v-hasPermi="['system:user:edit']"
+                v-hasPermi="['api.core.v1.SysUser/UpdateSysUser']"
               >修改
               </el-button>
               <el-button
@@ -190,18 +190,18 @@
                 type="text"
                 icon="el-icon-delete"
                 @click="handleDelete(scope.row)"
-                v-hasPermi="['system:user:remove']"
+                v-hasPermi="['api.core.v1.SysUser/DeleteSysUser']"
               >删除
               </el-button>
               <el-dropdown size="mini" @command="(command) => handleCommand(command, scope.row)"
-                           v-hasPermi="['system:user:resetPwd', 'system:user:edit']">
+                           v-hasPermi="['api.core.v1.SysUser/ResetPwd', 'api.core.v1.SysUser/UpdateSysUser']">
                 <el-button size="mini" type="text" icon="el-icon-d-arrow-right">更多</el-button>
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item command="handleResetPwd" icon="el-icon-key"
-                                    v-hasPermi="['system:user:resetPwd']">重置密码
+                                    v-hasPermi="['api.core.v1.SysUser/ResetPwd']">重置密码
                   </el-dropdown-item>
                   <el-dropdown-item command="handleAuthRole" icon="el-icon-circle-check"
-                                    v-hasPermi="['system:user:edit']">分配角色
+                                    v-hasPermi="['api.core.v1.SysUser/UpdateSysUser']">分配角色
                   </el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>

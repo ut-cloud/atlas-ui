@@ -33,7 +33,7 @@
           icon="el-icon-plus"
           size="mini"
           @click="openSelectUser"
-          v-hasPermi="['system:role:add']"
+          v-hasPermi="['api.core.v1.SysRole/CreateSysRole']"
         >添加用户
         </el-button>
       </el-col>
@@ -45,7 +45,7 @@
           size="mini"
           :disabled="multiple"
           @click="cancelAuthUserAll"
-          v-hasPermi="['system:role:remove']"
+          v-hasPermi="['api.core.v1.SysRole/DeleteSysRole']"
         >批量取消授权
         </el-button>
       </el-col>
@@ -85,7 +85,7 @@
             type="text"
             icon="el-icon-circle-close"
             @click="cancelAuthUser(scope.row)"
-            v-hasPermi="['system:role:remove']"
+            v-hasPermi="['api.core.v1.SysRole/DeleteSysRole']"
           >取消授权
           </el-button>
         </template>

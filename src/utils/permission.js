@@ -18,7 +18,7 @@ export function checkPermi(value) {
     return hasPermission;
 
   } else {
-    console.error(`need roles! Like checkPermi="['system:user:add','system:user:edit']"`)
+    console.error(`need roles! Like checkPermi="['api.core.v1.SysUser/SaveSysUser','api.core.v1.SysUser/UpdateSysUser']"`)
     return false
   }
 }

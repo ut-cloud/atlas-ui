@@ -41,7 +41,7 @@
           icon="el-icon-plus"
           size="mini"
           @click="handleAdd"
-          v-hasPermi="['system:post:add']"
+          v-hasPermi="['api.core.v1.SysPost/CreateSysPost']"
         >新增</el-button>
       </el-col>
       <el-col :span="1.5">
@@ -52,7 +52,7 @@
           size="mini"
           :disabled="single"
           @click="handleUpdate"
-          v-hasPermi="['system:post:edit']"
+          v-hasPermi="['api.core.v1.SysPost/UpdateSysPost']"
         >修改</el-button>
       </el-col>
       <el-col :span="1.5">
@@ -63,7 +63,7 @@
           size="mini"
           :disabled="multiple"
           @click="handleDelete"
-          v-hasPermi="['system:post:remove']"
+          v-hasPermi="['api.core.v1.SysPost/DeleteSysPost']"
         >删除</el-button>
       </el-col>
       <el-col :span="1.5">
@@ -102,14 +102,14 @@
             type="text"
             icon="el-icon-edit"
             @click="handleUpdate(scope.row)"
-            v-hasPermi="['system:post:edit']"
+            v-hasPermi="['api.core.v1.SysPost/UpdateSysPost']"
           >修改</el-button>
           <el-button
             size="mini"
             type="text"
             icon="el-icon-delete"
             @click="handleDelete(scope.row)"
-            v-hasPermi="['system:post:remove']"
+            v-hasPermi="['api.core.v1.SysPost/DeleteSysPost']"
           >删除</el-button>
         </template>
       </el-table-column>

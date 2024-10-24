@@ -89,7 +89,7 @@ export function getUserProfile() {
 // 修改用户个人信息
 export function updateUserProfile(data) {
   return request({
-    url: '/system/user/profile',
+    url: '/v1/user/profile',
     method: 'put',
     data: data
   })
@@ -102,9 +102,9 @@ export function updateUserPwd(oldPassword, newPassword) {
     newPassword
   }
   return request({
-    url: '/system/user/profile/updatePwd',
+    url: '/v1/user/updatePwd',
     method: 'put',
-    params: data
+    data: data
   })
 }
 
